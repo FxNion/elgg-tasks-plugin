@@ -1,5 +1,5 @@
 <?php
-	$worker=get_entity($vars['entity']->assigned_to)->name;
+	$worker=get_entity($vars['entity']->assigned_to);
 	$owner = $vars['entity']->getOwnerEntity();
 	$container = get_entity($vars['entity']->getContainer());
 	$friendlytime = friendly_time($vars['entity']->time_created);
@@ -28,7 +28,9 @@
 						</td>
 						<td width="33%" style="text-align: right;">
 						<b><?php echo $worker ? elgg_echo('tasks:assigned_to') :""; ?></b>
-						<?php echo $worker ? elgg_view('output/text',array('value' => $worker)) : ""; ?>
+						<?php if ($worker) { ?>
+						<a href="<?php echo $vars['url']; ?>pg/profile/<?php echo $worker->username; ?>"><?php echo $worker->name; ?></a>
+            <?php } ?>
 						</td>
 					</tr>
 				</table>

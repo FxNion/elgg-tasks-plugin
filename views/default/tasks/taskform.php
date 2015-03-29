@@ -41,7 +41,7 @@
 			$guid = 0;
 			$title = get_input('title',"");
 			$description = "";
-			//$address = get_input('address',"");
+
 			$highlight = 'all';
 			
 			if ($address == "previous")
@@ -60,7 +60,8 @@
 			$shares = array();
 			$owner = $vars['user'];
 			
-			$container_id = $vars['container_guid'];
+			//$container_id = $vars['container_guid'];
+			$container_id = get_input('container_guid');
 			$container = get_entity($container_id);
 			
 		}
@@ -69,16 +70,20 @@
 		$assign_list[0] = "";
 		$assign_list[$_SESSION['user']->getGUID()] = $_SESSION['user']->name;
 		if($container instanceof ElggGroup){
-				
-			$assign_list1 = $container->getMembers();
+
+			$assign_list1 = $container->getMembers(300);
 			
 			foreach($assign_list1 as $members)
 				$assign_list[$members->getGUID()] = $members->name;
 				
-		}	
-		//$assign_list = array_merge(array($_SESSION['user']->getGUID()=>$_SESSION['user']->name), $assign_list);
-		//$assign_list = array_merge(array('0'=>''), $assign_list);
-
+		}else{
+     
+      $assign_list1 = $_SESSION['user']->getFriends("", 300, $offset = 0);
+      
+			
+			foreach($assign_list1 as $friends)
+				$assign_list[$friends->getGUID()] = $friends->name;
+    }	
 ?>
 
 		<table class="tasks" width="100%">

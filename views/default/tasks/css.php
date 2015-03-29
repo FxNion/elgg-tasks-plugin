@@ -159,3 +159,14 @@ table.tasks{
 p.task_inforight{
  /*float: left;*/
 }
+
+#group_tasks_widget {
+	margin:0 0 20px 0;
+	padding: 0 0 5px 0;
+	background:white;
+	-webkit-border-radius: 8px; 
+	-moz-border-radius: 8px;
+}
+#group_tasks_widget .search_listing {
+	border: 2px solid #cccccc;
+}

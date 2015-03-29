@@ -60,22 +60,11 @@
 			$shares = array();
 			$owner = $vars['user'];
 			
-			$container_id = $vars['container_guid'];
+			
+			$container_id = get_input('container_guid');
 			$container = get_entity($container_id);
 			
 		}
-		
-		$assign_list = array();
-		$assign_list[0] = "";
-		$assign_list[$_SESSION['user']->getGUID()] = $_SESSION['user']->name;
-		if($container instanceof ElggGroup){
-				
-			$assign_list1 = $container->getMembers();
-			
-			foreach($assign_list1 as $members)
-				$assign_list[$members->getGUID()] = $members->name;
-				
-		}	
 ?>
 <div class="contentWrapper">
 	<form action="<?php echo $vars['url']; ?>action/tasks/add" method="post">

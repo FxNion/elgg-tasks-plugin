@@ -26,6 +26,8 @@
 				
 			// Add our CSS
 				extend_view('css','tasks/css');
+			// Add to groups context
+				extend_view('groups/left_column', 'tasks/groupprofile_tasks'); 
 				
 			// Register granular notification for this type
 			if (is_callable('register_notification_object'))
@@ -68,7 +70,7 @@
 					if ((isloggedin()) && (page_owner()) && (can_write_to_container(0, page_owner()))) {
 						$page_owner = page_owner_entity();
 						// Ajout de Fx pour créer des tasks vierges
-						add_submenu_item(sprintf(elgg_echo("tasks:add"),$page_owner->name), $CONFIG->wwwroot . "pg/tasks/" . $page_owner->username . '/add');
+						add_submenu_item(sprintf(elgg_echo("tasks:add"),$page_owner->name), $CONFIG->wwwroot . "pg/tasks/" . $page_owner->username . '/add'.'?container_guid='.$page_owner->getGUID());
 
 					}
 						
