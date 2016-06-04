@@ -1,4 +1,25 @@
 <?php
+/**
+ * Elgg Tasks CSS
+ *
+ * @package ElggTasks
+ */
+?>
+
+.tasks-nav.treeview ul {
+	background-color: transparent;
+}
+
+.tasks-nav.treeview a.selected {
+	color: #555555;
+}
+
+.tasks-nav.treeview .hover {
+	color: #0054a7;
+}
+
+
+<?php
 
 	/**
 	 * Elgg tasks CSS
@@ -39,7 +60,7 @@
 	padding:0 0 5px 0;
 }
 .sharing_item_tags {
-	background:transparent url(<?php echo $vars['url']; ?>_graphics/icon_tag.gif) no-repeat scroll left 2px;
+	background:transparent url(<?php echo elgg_get_site_url(); ?>_graphics/icon_tag.gif) no-repeat scroll left 2px;
 	margin:0;
 	padding:0 0 0 14px;
 }
@@ -117,12 +138,12 @@ input.tiny {
 	color:#999999;
 	font-size:12px;
 	font-weight:bold;
-	height:12px;
+	/*height:12px;*/
 	margin:0;
 	padding:2px;
 }
-.date{
-	width:155px;
+input.date{
+	width:100px;
 }
 input.number, input.task_work_remaining, input.task_percent_done {
 	-moz-border-radius-bottomleft:4px;
@@ -132,12 +153,12 @@ input.number, input.task_work_remaining, input.task_percent_done {
 	background-color:#FFFFFF;
 	border:1px solid #BBBBBB;
 	color:#999999;
-	font-size:12px;
+	/*font-size:12px;*/
 	font-weight:bold;
-	height:12px;
+	/*height:12px;*/
 	margin:0;
 	padding:2px;
-	width:26px;
+	width:100px;
 }
 
 .tasks_resume {
@@ -169,4 +190,30 @@ p.task_inforight{
 }
 #group_tasks_widget .search_listing {
 	border: 2px solid #cccccc;
+}
+
+.tasks label {display: inline-block; width: 120px}
+
+
+#task-calendar-script-warning {
+	display: none;
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	padding: 0 10px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+	color: red;
+}
+
+#task-calendar-loading {
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#task-calendar {
+	margin: 5px;
 }

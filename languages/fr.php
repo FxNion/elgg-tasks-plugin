@@ -17,7 +17,9 @@ $french = array(
 	 'tasks:shareditem'  =>  "Tâches" , 
 	 'tasks:with'  =>  "Partager ceci" , 
 	 'tasks:new'  =>  "Nouvelle tâche" , 
-	 'tasks:via'  =>  "via tâche" , 
+	 'tasks:via'  =>  "via tâche" ,
+	 'tasks:owner' => "Tâches de %s",
+	 'tasks:none' => "Aucune Tâche",	 
 	 
 	 'tasks:delete:confirm'  =>  "Etes-vous sur de supprimer cette tâche?" , 
 	 'tasks:numbertodisplay'  =>  "Nombre de tâches à afficher" , 
