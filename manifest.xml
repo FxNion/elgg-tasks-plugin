@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin_manifest>
-        <field key="author" value="Curverider" />
-        <field key="version" value="1.6" />
-        <field key="description" value="Elgg bookmarks plugin." />
-        <field key="website" value="http://www.elgg.org/" />
-        <field key="copyright" value="(C) Curverider 2008-2009" />
-		<field key="licence" value="GNU Public License version 2" />
-		<field key="elgg_version" value="2009070801" />
+        <field key="author" value="Fx NION" />
+        <field key="version" value="1.2" />
+        <field key="description" value="Provides tasks capabilities to Elgg for both a user or a group. And get fun." />
+        <field key="website" value="http://fxnion.free.fr/" />
+        <field key="copyright" value="((C) Fx NION 2009/2010" />
+        <field key="licence" value="GNU Public License version 2" />
+        <field key="elgg_version" value="2010030101" />
 </plugin_manifest>

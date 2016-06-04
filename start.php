@@ -17,6 +17,8 @@
 			global $CONFIG;
 			
 			extend_view('metatags','tasks/js');
+			// for 1.7 use this instead
+			// elgg_extend_view('metatags','tasks/js');
 			//add a tools menu option
 			if (isloggedin())
 	 	        add_menu(elgg_echo('tasks'), $CONFIG->wwwroot . "pg/tasks/" . $_SESSION['user']->username . '/items');
